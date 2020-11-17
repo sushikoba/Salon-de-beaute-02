@@ -1,0 +1,93 @@
+@media screen and (max-width: 910px) {
+
+    .about-us-img,
+    .about-concept-img,
+    .about-staff-img,
+    .menu-fulvic-img,
+    .reserve-img{
+        padding: 0;
+    }
+
+    .header{
+        &-pc-nav{
+            width: 77%;
+            margin: auto;
+        }
+
+        &-hide .header-scroll {
+            flex-direction: column;
+        
+            &-nav-li{
+                justify-content: center;
+                margin-top: 14px;
+            }
+        }
+    }
+
+    .about-concept-contents-group{
+        flex-wrap: wrap;
+    }
+
+    .menu{
+        &-bg{
+            height: 2380px;
+            background: url(../img/menu-bg-md.jpg) no-repeat bottom center;
+            background-size: cover;
+        }
+        &-contents{
+            &-row{
+                flex-direction: column;
+            }
+
+            &-item{
+                max-width: 504px;
+            }
+
+            .item-color{
+                margin: -50px 0 40px auto;
+            }
+
+            .item-straightening{
+                margin: -85px 0 40px auto;
+            }
+        }
+    }
+
+    .style-ttl, .menu-ttl{
+        width: 80%;
+    }
+
+    .reserve-contents-inner-btn{
+        margin-bottom: 40px;
+
+        >a {
+            display: block;
+            margin: 16px 0 8px;
+            padding: 11px 23px;
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+}
+@media screen and (max-width: 580px) {
+    .cross{
+        .bar-top{
+        transform: rotate(30deg) translate(0px, 6px);
+        }
+        .bar-mid{
+        opacity: 0;
+        }
+        .bar-bottom{
+        transform: rotate(-30deg) translate(0px, -6px);
+        }
+    }  
+    .style{
+        &-pc{
+            display: none;
+        }
+        &-sp{
+            display: flex;
+        }
+    }
+}

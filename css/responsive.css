@@ -1,0 +1,85 @@
+@media screen and (max-width: 910px) {
+  .about-us-img,
+  .about-concept-img,
+  .about-staff-img,
+  .menu-fulvic-img,
+  .reserve-img {
+    padding: 0;
+  }
+  .header-pc-nav {
+    width: 77%;
+    margin: auto;
+  }
+  .header-hide .header-scroll {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-hide .header-scroll-nav-li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 14px;
+  }
+  .about-concept-contents-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu-bg {
+    height: 2380px;
+    background: url(../img/menu-bg-md.jpg) no-repeat bottom center;
+    background-size: cover;
+  }
+  .menu-contents-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu-contents-item {
+    max-width: 504px;
+  }
+  .menu-contents .item-color {
+    margin: -50px 0 40px auto;
+  }
+  .menu-contents .item-straightening {
+    margin: -85px 0 40px auto;
+  }
+  .style-ttl, .menu-ttl {
+    width: 80%;
+  }
+  .reserve-contents-inner-btn {
+    margin-bottom: 40px;
+  }
+  .reserve-contents-inner-btn > a {
+    display: block;
+    margin: 16px 0 8px;
+    padding: 11px 23px;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .cross .bar-top {
+    -webkit-transform: rotate(30deg) translate(0px, 6px);
+            transform: rotate(30deg) translate(0px, 6px);
+  }
+  .cross .bar-mid {
+    opacity: 0;
+  }
+  .cross .bar-bottom {
+    -webkit-transform: rotate(-30deg) translate(0px, -6px);
+            transform: rotate(-30deg) translate(0px, -6px);
+  }
+  .style-pc {
+    display: none;
+  }
+  .style-sp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

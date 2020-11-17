@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja prefix="og: サイトURL#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon de beaute | 葛飾区あなたのためのサロン</title>
+    <meta name="description" content="" />
+     <!--ここからOGP-->
+     <meta property="og:url" content=" ページの URL" />
+     <meta property="og:type" content=" ページの種類" />
+     <!--website /blog 下層→article-->
+     <meta property="og:title" content=" ページの タイトル" />
+     <meta property="og:description" content=" ページのディスクリプション" />
+     <meta property="og:site_name" content="サイト名" />
+     <meta property="og:image" content=" サムネイル画像の URL" />
+     <!--//OGPここまで-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   	<link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/responsive.css"> 
+</head>
+<body>
+<!---------------------ローディング-------------------------->
+     <div id="loader-bg">
+        <div class="load">
+            <div class="load-dots"><div class=""></div></div>
+            <img id="load-img" src="./img/logo-type.png" alt="">
+        </div>
+    </div>
+<!----------------------ヘッダー-------------------------->
+<header>
+    <div class="header">
+        <div class="header-pc">
+        <!------------------------PCナビメニュー------------------------------->
+            <nav class="header-pc-nav">
+                <ul class="header-pc-nav-li">
+                    <li class="header-pc-nav-li-item"><a class="scroll-btn" href="#navAbout">
+                        <div class="header-pc-nav-li-item-en">about</div>
+                        <div class="header-pc-nav-li-item-ja">サロンについて</div>
+                    </a></li>
+                    <li class="header-pc-nav-li-item"><a class="scroll-btn" href="#navStyle">
+                        <div class="header-pc-nav-li-item-en">style</div>
+                        <div class="header-pc-nav-li-item-ja">スタイル</div>
+                    </a></li>
+                    <li class="header-pc-nav-li-item"><a class="scroll-btn" href="#navMenu">
+                        <div class="header-pc-nav-li-item-en">menu</div>
+                        <div class="header-pc-nav-li-item-ja">メニュー</div>
+                    </a></li>
+                    <li class="header-pc-nav-li-item"><a class="scroll-btn" href="#navReserve">
+                        <div class="header-pc-nav-li-item-en">reserve</div>
+                        <div class="header-pc-nav-li-item-ja">ご予約</div>
+                    </a></li>
+                    <li class="header-pc-nav-li-item"><a class="scroll-btn" href="#navAccess">
+                        <div class="header-pc-nav-li-item-en">access</div>
+                        <div class="header-pc-nav-li-item-ja">アクセス</div>
+                    </a></li>
+                </ul>
+            </nav>
+        </div><!-- //.header-pc-->       
+        <div class="header-hide">
+            <div class="header-scroll">
+                <div class="header-scroll-logo">
+                    <img src="./img/header-logo.png" alt="" class="img-fluid">
+                </div>
+            <!------------------------PCナビメニュー------------------------------->
+                <nav class="header-scroll-nav">
+                    <ul class="header-scroll-nav-li">
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#navAbout">
+                            <div class="header-scroll-nav-li-item-en">about</div>
+                            <div class="header-scroll-nav-li-item-ja">サロンについて</div>
+                        </a></li>
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#navStyle">
+                            <div class="header-scroll-nav-li-item-en">style</div>
+                            <div class="header-scroll-nav-li-item-ja">スタイル</div>
+                        </a></li>
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#nsvMenu">
+                            <div class="header-scroll-nav-li-item-en">menu</div>
+                            <div class="header-scroll-nav-li-item-ja">メニュー</div>
+                        </a></li>
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#navReserve">
+                            <div class="header-scroll-nav-li-item-en">reserve</div>
+                            <div class="header-scroll-nav-li-item-ja">ご予約</div>
+                        </a></li>
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#navAccess">
+                            <div class="header-scroll-nav-li-item-en">access</div>
+                            <div class="header-scroll-nav-li-item-ja">アクセス</div>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div><!-- //.header-scroll-->
+        </div><!-- //.header-hide-->
+    <!------------------------SP ヘッダー------------------------------->
+        <div class="header-sp">
+    <!------------------------SPバーガー------------------------------->
+            <div class="header-sp-burger">
+                <a href="#">
+                    <span class="bar bar-top"></span>
+                    <span class="bar bar-mid"></span>
+                    <span class="bar bar-bottom"></span>
+                    <p>MENU</p> 
+                </a>
+            </div>
+              <!--------------------バーガーメニュー---------------------------->
+            <div class="header-sp-open" id="nav-open">
+                   <nav class="header-sp-open-nav">
+                       <ul class="header-sp-open-nav-li">
+                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navAbout">about</a></li>
+                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#nsvMenu">menu</a></li>
+                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navStyle">style</a></li>
+                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navReserve">reserve</a></li>
+                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navAccess">access</a></li>
+                       </ul>
+                   </nav>
+                  <div class="header-sp-open-link">
+                           <div class="header-sp-open-link-web">
+                                    <a href="#"><i class="fas fa-desktop"></i>WEB予約 </a>
+                         </div>
+                         <div class="header-sp-open-link-tel">
+                                    <a href="tel:03-1234-5678"><i class="fas fa-phone"></i>TEL予約</a>
+                           </div>
+                  </div>
+            </div>
+        </div><!-- //.header-sp-->
+    </div><!-- //.header-->      
+  </header>
+<!---------------------- メイン -------------------------->
+    <main>
+<!---------------------- FV -------------------------->
+        <div class="fv">
+           <div class="fv-img">
+                <img class="img-fluid " src="./img/fv-img-pc.png" alt="">
+                <div class="fv-img-logo"><img class="img-fluid " src="./img/fv-logo.png" alt=""></div>
+            </div>
+        </div>
+<!---------------------- BG PAPER -------------------------->
+        <div class="bg-paper">
+<!---------------------- ABOUT -------------------------->
+<section class="about" id="navAbout">
+<!---------------------- ABOUT 1 -------------------------->
+<div class="about-us row">
+    <div class="about-us-img offset-md-1 col-md-7 col-10"><img src="./img/about01.jpg" alt="" class="img-fluid"></div>
+    <div class="about-us-contents offset-sm-3 col-sm-9">
+        <h3>What's Salon de beaute</h3>
+        <hr>
+        <p>Salon de beauteは東京の下町にある美容室です。<br>
+            夫婦で営んでおり、地元のお客様に寄り添ったお店でありたいと思っています。<br>
+            お客様と生涯に渡ってお付き合いができる。そんな存在を目指して日々お客様と接しています。</p>
+    </div>
+</div>
+<!---------------------- ABOUT 2-------------------------->
+<div class="about-concept row">
+    <div class="about-concept-img offset-md-4 offset-2 col-md-7 col-10"><img src="./img/about02.jpg" alt="" class="img-fluid"></div>
+    <div class="about-concept-contents col-md-10">
+        <h3>Concept 「あなたのためのサロン」</h3>
+        <hr>
+        <div class="about-concept-contents-group">
+            <div class="concept01">
+                <i class="fas fa-user"></i>
+                <p>カウンセリングから仕上げまで
+                    <span>担当者が変わりません</span>。</p>
+            </div>
+            <div class="concept02">
+                <svg id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464.39 939"><title>icon_color</title><rect x="103" y="828.43" width="257.22" height="110.57" rx="14.63" ry="14.63"/><polygon points="114.06 806.79 350.33 806.79 450.43 607.77 12.8 607.77 114.06 806.79"/><polygon points="12.8 586.13 450.43 586.13 464.39 87.98 0 87.98 12.8 586.13"/><rect width="464.39" height="66.34"/></svg>
+                <p><span>お一人お一人の髪質や頭皮の
+                    状態にあったトリートメント・
+                    薬剤</span>を処方いたします。</p>
+            </div>
+            <div class="concept03">
+                <i class="fas fa-child"></i>
+                <p>プライベートサロンのため、<span>お子様連れ</span>でもご来店いただけます。</p>
+            </div>
+            <div class="concept04">
+                <i class="far fa-calendar-alt"></i>
+                <p>お時間やお日にちの都合が合わない場合、できる限り<span>個別に対応させていただきます</span>。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------- ABOUT 3 -------------------------->
+<div class="about-staff row">
+    <div class="about-staff-img offset-md-1 col-md-7 col-10"><img src="./img/about03.jpg" alt="" class="img-fluid"></div>
+    <div class="about-staff-contents offset-sm-3 col-sm-9">
+        <h3>Staff Profile</h3>
+        <hr>
+        <div class="about-staff-contents-profile">
+            <img src="./img/staff.png" alt="" class="img-fluid about-staff-contents-profile-img">
+            <p>名前 石井真一<br>
+                生年月日 1989年11月22日<br>
+                出身地 東京都葛飾区<br>
+                血液型 B型<br>
+                趣味 NBA観戦<br>
+            </p>
+        </div>
+        <p class="about-staff-contents-message">愛着のある地元で美容室ができることを大変嬉しく思っております。<br>
+            お一人お一人のお客さまに寄り添い、末長いお付き合いができるよう日々精進して参りますので、よろしくお願いします！
+        </p>
+    </div>
+</div>
+</section>
+<!---------------------- STYLE -------------------------->
+<section class="style" id="navStyle">
+    <div class="style-ttl">
+        <h1>style</h1>
+        <hr>
+    </div>
+<!---------------------- SLIDER -------------------------->
+    <div class="style-pc">
+        <ul class="style-slider">
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style01"><img class="img-fluid" src="./img/style/style01.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style02"><img class="img-fluid" src="./img/style/style02.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style03"><img class="img-fluid" src="./img/style/style03.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style04"><img class="img-fluid" src="./img/style/style04.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style05"><img class="img-fluid" src="./img/style/style05.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style06"><img class="img-fluid" src="./img/style/style06.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style07"><img class="img-fluid" src="./img/style/style07.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style08"><img class="img-fluid" src="./img/style/style08.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style09"><img class="img-fluid" src="./img/style/style09.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style10"><img class="img-fluid" src="./img/style/style10.jpg" alt=""></a></li>
+             <li><a href="#" class="modal-open" data-toggle="modal" data-target="style11"><img class="img-fluid" src="./img/style/style11.jpg" alt=""></a></li>
+         </ul>
+    </div>
+<!----------スタイル写真モダル-------------->
+    <div class="style-modal-wrapper">
+        <div class="modal style-modal" id="style01">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style01.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style02">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style02.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style03">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style03.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style04">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style04.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style05">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style05.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style06">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style06.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style07">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style07.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style08">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style08.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style09">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style09.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style10">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style10.jpg" alt=""></div>
+        </div>
+        <div class="modal style-modal" id="style11">
+                <div class="style-modal-close"><i class="fa fa-2x fa-times"></i></div>
+                <div class="style-modal-img"><img src="./img/style/style11.jpg" alt=""></div>
+        </div>
+    </div>
+<!----------SP用スタイル（スライダーなし＋モダル付き）--------->
+    <div class="style-sp row">
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style01"><img class="img-fluid" src="img/style/style01.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style02"><img class="img-fluid" src="img/style/style02.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style03"><img class="img-fluid" src="img/style/style03.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="moda data-open-toggle="modal" data-target="style04"><img class="img-fluid" src="img/style/style04.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style05"><img class="img-fluid" src="img/style/style05.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style06"><img class="img-fluid" src="img/style/style06.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style07"><img class="img-fluid" src="img/style/style07.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style08"><img class="img-fluid" src="img/style/style08.jpg" alt=""></a></div>
+           <div class="col-4"><a href="" class="modal-open" data-toggle="modal" data-target="style09"><img class="img-fluid" src="img/style/style09.jpg" alt=""></a></div>
+    </div>
+</section>
+<!---------------------- MENU -------------------------->
+<section class="menu"  id="navMenu">
+    <div class="menu-ttl">
+        <h1>menu</h1>
+        <hr>
+    </div>
+    <!---------------------- MENU コンテンツ -------------------------->
+    <div class="menu-bg">
+        <div class="menu-contents">
+            <div class="menu-contents-row">
+                <div class="menu-contents-item item-cut">
+                    <div class="menu-contents-item-icon">
+                        <div class="menu-contents-item-icon-circle circle-cut"></div>
+                        <div class="menu-contents-item-icon-img">
+                            <img class="icon-cut" src="./img/icon_menu/icon_cut.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-contents-item-inner">
+                        <h2>CUT<div class="line"></div></h2>
+                        <table>
+                            <tr>
+                                <td>カット＆シャンプー</td>
+                                <td>¥4,100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu-contents-item item-color">
+                    <div class="menu-contents-item-icon">
+                        <div class="menu-contents-item-icon-circle circle-color"></div>
+                        <div class="menu-contents-item-icon-img">
+                            <img class="icon-color" src="./img/icon_menu/icon_color.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-contents-item-inner">
+                        <h2>COLOR<div class="line"></div></h2>           
+                        <table>
+                            <tr>
+                                <td>高濃度フルボ酸リタッチカラー</td>
+                                <td>¥8,500</td>
+                            </tr>
+                            <tr>
+                                <td>高濃度フルボ酸ワンメイクカラー</td>
+                                <td>¥9,500</td>
+                            </tr>
+                            <tr>
+                                <td>高濃度フルボ酸入りWカラー</td>
+                                <td>¥15,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu-contents-item item-perm">
+                    <div class="menu-contents-item-icon">
+                        <div class="menu-contents-item-icon-circle circle-perm"></div>
+                        <div class="menu-contents-item-icon-img">
+                            <img class="icon-perm" src="./img/icon_menu/icon_perm.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-contents-item-inner">
+                        <h2>PERM<div class="line"></div></h2> 
+                        <table>
+                            <tr>
+                                <td>高濃度フルボ酸スピデジパーマ</td>
+                                <td>¥14,000</td>
+                            </tr>
+                            <tr>
+                                <td>メンズデザインパーマ</td>
+                                <td>¥9,800</td>
+                            </tr>
+                            <tr>
+                                <td>高濃度フルボ酸入りコスメパーマ</td>
+                                <td>¥12,000</td>
+                            </tr>
+                            <tr>
+                                <td>高濃度フルボ酸入りポイントパーマ</td>
+                                <td>¥8,000</td>
+                            </tr>
+                            <tr>
+                                <td>ニュアンスストレート</td>
+                                <td>¥12,800</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-contents-row">
+                <div class="menu-contents-item item-straightening">
+                    <div class="menu-contents-item-icon">
+                        <div class="menu-contents-item-icon-circle circle-straightening"></div>
+                        <div class="menu-contents-item-icon-img">
+                            <img class="icon-straightening" src="./img/icon_menu/icon_straighting.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-contents-item-inner straightening">
+                        <h2>STRAIGHTENING<div class="line"></div></h2>
+                        <table>
+                            <tr>
+                                <td>高濃度フルボ酸入り縮毛矯正</td>
+                                <td>¥12,000</td>
+                            </tr>
+                            <tr>
+                                <td>高濃度フルボ酸入りポイント矯正</td>
+                                <td>¥4,250～</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu-contents-item item-other">
+                    <div class="menu-contents-item-icon">
+                        <div class="menu-contents-item-icon-circle circle-other"></div>
+                        <div class="menu-contents-item-icon-img">
+                            <img class="icon-other" src="./img/icon_menu/icon_other.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-contents-item-inner">
+                        <h2>OTHER<div class="line"></div></h2>
+                        <table>
+                            <tr>
+                                <td>シャンプー＆ブロー</td>
+                                <td>¥2,700</td>
+                            </tr>
+                            <tr>
+                                <td>完熟トリートメントヘッドスパ</td>
+                                <td>¥3,800</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-contents-card">
+            <div class="menu-card-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-jcb"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+            <p>カードでもお支払いいただけます。</p>
+        </div>    
+    </div>
+    <!---------------------- 高濃度フルボ酸-------------------------->
+    <div class="menu-fulvic row">
+        <div class="menu-fulvic-contents offset-sm-4 col-sm-8">
+            <h3>〜高濃度フルボ酸とは？〜</h3>
+            <p>フルボ酸とは土壌の中に存在する有機酸の１つで、自然界の中では植物にミネラルを補給する機能があります。<br>
+                人に対しては、美容や健康に対して効果があると期待されている成分です。<br>
+                Salon de beauteでは美容成分であるフルボ酸を高濃度で配合した製品を使用しています。</p>
+            <a href="#" class="menu-fulvic-contents-link">Learn more</a>
+        </div>
+        <div class="menu-fulvic-img offset-md-1 col-md-7 col-10"><img src="./img/menu-photo.jpg" alt="" class="img-fluid"></div>
+    </div>
+</section>
+<!---------------------- RESERVE -------------------------->
+<section class="reserve row" id="navReserve">
+    <div class="reserve-contents col-sm-9">
+        <div class="reserve-contents-ttl">
+            <h1>reserve</h1>
+            <hr>
+        </div>
+        <div class="reserve-contents-inner">
+            <p>ご予約はお電話、または、Hotpepper beautyで承っております。</p>
+            <div class="reserve-contents-inner-btn">    
+                <a href="tel:03-1234-5678" class="link-tel">
+                            <i class="fas fa-phone"></i>03-1234-5678</a>
+                <a href="#" class="link-hotpepper">Hotpepper Beautyはこちら</a>
+            </div>
+            <div class="reserve-contents-inner-time">
+                <div class="reserve-contents-inner-time-open">
+                        <h4>OPEN </h4>
+                        <p>水木金 10:00〜22:00 <br>
+                        <span> （最終受付：パーマ・カラー18:00/カット19:00）</span></p>
+                        <p>土日月 10:00〜20:00 <br>
+                        <span>（最終受付：パーマ・カラー18:00/カット19:00）</span></p>
+                </div>
+                <div class="reserve-contents-inner-time-close">
+                        <h4>CLOSE </h4>
+                        <p>月曜日・不定休 <br>
+                        <span>（不定休についてはBlogでお知らせします）</span></p> 
+                        <a href="" class="link-blog">Blogへ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reserve-img offset-md-4 offset-2 col-md-7 col-10"><img src="./img/reserve.jpg" alt="" class="img-fluid"></div>
+</section>
+        </div><!--//.bg-paper-->
+    </main>
+<!---------------------- //メイン -------------------------->
+    <footer>
+<!---------------------- ACCESS -------------------------->
+        <div class="access" id="navAccess">
+            <div class="access-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51805.88160210083!2d139.81845497027527!3d35.75405887525805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f7e104957ed%3A0x1dde17d268dda727!2z5pel5pys44CB5p2x5Lqs6YO96JGb6aO-5Yy6!5e0!3m2!1sja!2sca!4v1601860834280!5m2!1sja!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="access-address">
+                    <h3>Salon de beaute</h3>
+                    <p><a href="tel:03-1234-5678"><i class="fas fa-phone"></i>03-1234-5678</a> <br>
+                    〒120-0000 <br>
+                    東京都葛飾区〇〇 ×-×-× ◯◯ビル1F</〒120-0000</p> 
+            </div>
+        </div>
+        <p class="copyright">&copy 2020 Haru All rights reserved.</p>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/46153b19c3.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
