@@ -30,13 +30,19 @@ p {
   line-height: 29px;
 }
 
+/***** 1480px以上の時 *****/
+.about, .style, .menu, .reserve {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
 .about-concept, .style-ttl,
 .menu-ttl, .menu-fulvic, footer {
   color: #F9FBFC;
 }
 
 hr {
-  width: 90%;
+  width: 85%;
   border-top: 1px solid #F9FBFC;
   margin-top: 10px;
 }
@@ -127,6 +133,12 @@ hr {
 /************************
                 HEADER
 ************************/
+.header {
+  /***** TOP背景透過 *****/
+  /***** スクロール後のスティッキーHeader *****/
+  /***** SP用のバーガーボタン・メニュー非表示 *****/
+}
+
 .header-pc {
   width: 100%;
   z-index: 10;
@@ -360,6 +372,13 @@ hr {
 ************************/
 .style {
   margin-top: 110px;
+  /************************
+            MODAL内
+************************/
+}
+
+.style-sp {
+  display: none;
 }
 
 .style-ttl {
@@ -368,36 +387,38 @@ hr {
   width: 59%;
 }
 
-.style-sp {
-  display: none;
-}
-
 .style-pc {
   width: 90%;
   margin: 0 auto;
   margin-top: -110px;
+  /***** スライダーの設定 *****/
 }
 
-.style-slider .slick-slide {
+.style-pc .style-slider {
+  /***** 左右ARROWS *****/
+  /***** 下スライダードット *****/
+}
+
+.style-pc .style-slider .slick-slide {
   margin: 15px;
 }
 
-.style-slider .slide-arrow {
+.style-pc .style-slider .slide-arrow {
   position: absolute;
   top: 40%;
   font-size: 28px;
   cursor: pointer;
 }
 
-.style-slider .prev-arrow {
+.style-pc .style-slider .prev-arrow {
   left: -20px;
 }
 
-.style-slider .next-arrow {
+.style-pc .style-slider .next-arrow {
   right: -20px;
 }
 
-.style-slider .slick-dots {
+.style-pc .style-slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,7 +427,7 @@ hr {
           justify-content: center;
 }
 
-.style-slider .slick-dots li button {
+.style-pc .style-slider .slick-dots li button {
   font-size: 0;
   margin: 0 14px;
   width: 60px;
@@ -417,35 +438,41 @@ hr {
   outline: none;
 }
 
-.style-slider .slick-dots .slick-active button {
+.style-pc .style-slider .slick-dots .slick-active button {
   background: #402A23;
   opacity: 1;
 }
 
-/************************
-            MODAL内
-************************/
-.style-modal {
+.style-pc .style-slider .modal-open {
+  outline: none;
+}
+
+.style-modal-wrapper {
+  /*****　モダル背景 *****/
+}
+
+.style-modal-wrapper .style-modal {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 200;
+  z-index: 800;
   padding-top: 5%;
+  /***** 写真・CLOSEボタン *****/
 }
 
-.style-modal-img, .style-modal-close {
+.style-modal-wrapper .style-modal-img, .style-modal-wrapper .style-modal-close {
   max-width: 400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.style-modal-close {
+.style-modal-wrapper .style-modal-close {
   color: #F9FBFC;
   text-align: right;
   cursor: pointer;
 }
 
-.style-modal-img img {
+.style-modal-wrapper .style-modal-img img {
   width: 100%;
 }
 
@@ -467,6 +494,12 @@ hr {
   width: 59%;
   z-index: 10;
   position: relative;
+  text-align: right;
+}
+
+.menu-ttl hr {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .menu-bg {
@@ -477,7 +510,8 @@ hr {
 }
 
 .menu-bg .menu-contents {
-  padding: 290px 0 140px 0;
+  padding: 290px 0 140px;
+  /***** クレカ記述 *****/
 }
 
 .menu-bg .menu-contents-row {
@@ -491,11 +525,15 @@ hr {
 
 .menu-bg .menu-contents-item {
   padding: 20px;
+  /***** アイコン *****/
+  /***** メニュー内容 *****/
 }
 
 .menu-bg .menu-contents-item-icon {
   text-align: right;
   position: relative;
+  /***** アイコン写真 *****/
+  /***** アイコンサークル *****/
 }
 
 .menu-bg .menu-contents-item-icon-img {
@@ -643,7 +681,7 @@ hr {
 }
 
 .reserve-contents-inner {
-  margin-top: 30px;
+  margin-top: 45px;
 }
 
 .reserve-contents-inner-btn > a {
@@ -674,7 +712,6 @@ hr {
 
 .reserve-contents-inner-time-close .link-blog {
   display: inline-block;
-  margin-left: 20px;
   padding: 6px 18px;
   border: 1px solid #402A23;
   border-radius: 20px;
@@ -689,6 +726,9 @@ hr {
 ************************/
 footer {
   background-color: #5C4D4D;
+  /************************
+                 ACCESS
+    ************************/
 }
 
 footer .access {

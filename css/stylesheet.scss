@@ -9,6 +9,7 @@ $color-blue:#97A9B5;
 $color-pink: #B38BBA;
 $color-red: #BA8080;
 $color-green: #80BA96;
+$color-hotpepper: #D45D79;
 
 /************************
                 BASE
@@ -40,13 +41,19 @@ p{
     line-height: 29px;
 }
 
+/***** 1480px以上の時 *****/
+.about, .style, .menu, .reserve{
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
 .about-concept, .style-ttl,
 .menu-ttl, .menu-fulvic, footer{
     color: $color-white;
 }
 
 hr{
-    width: 90%;
+    width: 85%;
     border-top: 1px solid $color-white;
     margin-top: 10px;
 }
@@ -128,6 +135,7 @@ hr{
 ************************/
 .header{
 
+    /***** TOP背景透過 *****/
     &-pc{
         width: 100%;
         z-index: 10;
@@ -164,7 +172,8 @@ hr{
         }
     } 
 
-     &-hide{
+    /***** スクロール後のスティッキーHeader *****/
+    &-hide{
         display: none;
 
         .header-scroll{
@@ -208,6 +217,7 @@ hr{
         }
     }
 
+    /***** SP用のバーガーボタン・メニュー非表示 *****/
     &-sp{
         display: none;
     }
@@ -341,90 +351,101 @@ hr{
 .style{
     margin-top: 110px;
 
+    &-sp{
+        display: none;
+    }
+
     &-ttl{
         padding: 60px 52px 160px;
         background-color: $color-base;
         width: 59%
     }
 
-    &-sp{
-        display: none;
-    }
-
     &-pc{
         width: 90%;
         margin: 0 auto;
         margin-top: -110px;
-    }
+    
+        /***** スライダーの設定 *****/
+        .style-slider{
 
-    &-slider{
+                .slick-slide{
+                    margin: 15px;
+                }
 
-            .slick-slide{
-                margin: 15px;
-            }
+                /***** 左右ARROWS *****/
+                .slide-arrow{
+                    position: absolute;
+                    top: 40%;
+                    font-size: 28px;
+                    cursor: pointer;
+                }
 
-            .slide-arrow{
-                position: absolute;
-                top: 40%;
-                font-size: 28px;
-                cursor: pointer;
-            }
+                .prev-arrow{
+                    left: -20px;
+                }
 
-            .prev-arrow{
-                left: -20px;
-            }
-
-            .next-arrow{
-                right: -20px;
-            }
-            
-            .slick-dots{
-                display: flex;
-                justify-content: center;
+                .next-arrow{
+                    right: -20px;
+                }
                 
-                li button{ 
-                    font-size: 0; 
-                    margin: 0 14px;
-                    width: 60px;
-                    height: 3px;
-                    background: $color-letter;
-                    opacity: 0.6;
-                    border: none;
+                /***** 下スライダードット *****/
+                .slick-dots{
+                    display: flex;
+                    justify-content: center;
+                    
+                    li button{ 
+                        font-size: 0; 
+                        margin: 0 14px;
+                        width: 60px;
+                        height: 3px;
+                        background: $color-letter;
+                        opacity: 0.6;
+                        border: none;
+                        outline: none;
+                    }
+
+                    .slick-active button{
+                        background: $color-letter;
+                        opacity: 1;
+                    }
+                } 
+
+                .modal-open{
                     outline: none;
                 }
-
-                .slick-active button{
-                    background: $color-letter;
-                    opacity: 1;
-                }
-            } 
+        }
     }
-}
 /************************
             MODAL内
 ************************/
- .style-modal{
-     width: 100%;
-     height: 100%;
-     background-color:rgba(0, 0, 0, 0.8);
-     z-index: 200;
-     padding-top: 5%;
-    
-     &-img, &-close{
-         max-width: 400px;
-         margin: 0 auto;
-         padding: 0 20px;
-     }
-     &-close{
-        color: $color-white;
-        text-align: right;
-        cursor: pointer;
-     }
-     &-img{
-         img{
-             width: 100%;
+    &-modal-wrapper{
+        /*****　モダル背景 *****/
+        .style-modal{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.8);
+            z-index: 800;
+            padding-top: 5%;
+            
+            /***** 写真・CLOSEボタン *****/
+            &-img, &-close{
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            &-close{
+                color: $color-white;
+                text-align: right;
+                cursor: pointer;
+            }
+            &-img{
+                img{
+                    width: 100%;
+                }
+            }
          }
-     }
+    }
 }
 /************************
                 MENU
@@ -440,7 +461,14 @@ hr{
         width: 59%;
         z-index: 10;
         position: relative;
+        text-align: right;
+
+        hr{
+            margin-right: 0;
+            margin-left: auto;
+        }
     }
+
     &-bg{
         margin-top : -110px;
         height: 1900px;
@@ -448,7 +476,7 @@ hr{
         background-size: cover;
     
         .menu-contents{
-            padding: 290px 0 140px 0;
+            padding: 290px 0 140px;
 
             &-row{
                 display: flex;
@@ -459,10 +487,12 @@ hr{
             &-item{
                 padding: 20px;
 
+                /***** アイコン *****/
                 &-icon{
                     text-align: right;
                     position: relative;
 
+                    /***** アイコン写真 *****/
                     &-img{
                         height: 140px;
                         margin-right: 25px;
@@ -487,6 +517,7 @@ hr{
                         }
                     }
 
+                    /***** アイコンサークル *****/
                     &-circle{
                         width: 132px;
                         height: 132px;
@@ -513,6 +544,7 @@ hr{
                     }
                 }
 
+                /***** メニュー内容 *****/
                 &-inner{
                     margin-top: -40px;
 
@@ -547,10 +579,13 @@ hr{
                         }
                     }
                 }
+
                 .straightening{
                     width: 470px;
                 }
             }
+
+            /***** クレカ記述 *****/
             &-card{
                 text-align: center;
 
@@ -603,7 +638,7 @@ hr{
        }
 
        &-inner{
-           margin-top: 30px;
+           margin-top: 45px;
         
            &-btn{
                
@@ -619,7 +654,7 @@ hr{
                     margin-right: 20px;
                }
                .link-hotpepper{
-                    border: 1px solid #D45D79;
+                    border: 1px solid $color-hotpepper;
                }
            }
 
@@ -632,7 +667,6 @@ hr{
                &-close{
                 .link-blog{
                     display: inline-block;
-                    margin-left: 20px;
                     padding: 6px 18px;
                     border: 1px solid $color-letter;
                     border-radius: 20px;
@@ -652,6 +686,10 @@ hr{
 footer{
     background-color: $color-base;
 
+
+    /************************
+                 ACCESS
+    ************************/
     .access{
         display: flex;
         justify-content: center;

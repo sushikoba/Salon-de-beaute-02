@@ -1,10 +1,17 @@
+@charset "UTF-8";
 @media screen and (max-width: 910px) {
+  /***** 左右の写真の隙間０ ******/
   .about-us-img,
   .about-concept-img,
   .about-staff-img,
   .menu-fulvic-img,
   .reserve-img {
     padding: 0;
+  }
+  .header {
+    /***** TOPのHeader ******/
+    /***** スクロール後のHeader
+        ロゴとメニューを中央揃え縦並びに ******/
   }
   .header-pc-nav {
     width: 77%;
@@ -22,13 +29,24 @@
             justify-content: center;
     margin-top: 14px;
   }
+  /***** ABOUT CONCEPT ******/
+  .about-concept-contents {
+    padding: 182px 20px 220px;
+  }
   .about-concept-contents-group {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .about-concept-contents-group .concept03, .about-concept-contents-group .concept04 {
+    margin-top: 30px;
+  }
+  .menu {
+    /***** 背景を高く ******/
+    /***** メニューのアイテムの位置調整 ******/
+  }
   .menu-bg {
     height: 2380px;
-    background: url(../img/menu-bg-md.jpg) no-repeat bottom center;
+    background: url(../img/menu-bg-md.jpg) no-repeat bottom;
     background-size: cover;
   }
   .menu-contents-row {
@@ -49,8 +67,9 @@
   .style-ttl, .menu-ttl {
     width: 80%;
   }
+  /***** 予約ボタンのサイズ調整 ******/
   .reserve-contents-inner-btn {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .reserve-contents-inner-btn > a {
     display: block;
@@ -62,16 +81,187 @@
 }
 
 @media screen and (max-width: 580px) {
-  .cross .bar-top {
-    -webkit-transform: rotate(30deg) translate(0px, 6px);
-            transform: rotate(30deg) translate(0px, 6px);
+  /***** BASE ******/
+  h1 {
+    font-size: 24px;
   }
-  .cross .bar-mid {
+  h2, h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 11px;
+    line-height: 22px;
+  }
+  /***** HEADER ******/
+  .header-pc {
+    display: none;
+  }
+  .header-sp {
+    display: block;
+    position: relative;
+    /***** バーガーボタン ******/
+    /***** バーガーメニュー *****/
+  }
+  .header-sp-burger {
+    z-index: 300;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    /***** 開くボタン ******/
+    /***** 閉じるボタン ******/
+  }
+  .header-sp-burger .bars .bar {
+    display: block;
+    height: 1px;
+    width: 30px;
+    background-color: #402A23;
+    margin-right: 0;
+    margin-left: auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .header-sp-burger .bars .bar-top,
+  .header-sp-burger .bars .bar-mid {
+    margin-bottom: 7px;
+  }
+  .header-sp-burger .bars .burger-text {
+    text-align: center;
+    line-height: 18px;
+    font-size: 8px;
+    padding-top: 7px;
+    margin: 0;
+  }
+  .header-sp-burger.cross {
+    /***** JSにてtoggleClassされる *****/
+  }
+  .header-sp-burger.cross .bar {
+    background-color: #F9FBFC;
+  }
+  .header-sp-burger.cross .bar-top {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotate(40deg) translate(6px, 6px);
+            transform: rotate(40deg) translate(6px, 6px);
+  }
+  .header-sp-burger.cross .bar-mid {
     opacity: 0;
   }
-  .cross .bar-bottom {
-    -webkit-transform: rotate(-30deg) translate(0px, -6px);
-            transform: rotate(-30deg) translate(0px, -6px);
+  .header-sp-burger.cross .bar-bottom {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotate(-40deg) translate(6px, -6px);
+            transform: rotate(-40deg) translate(6px, -6px);
+  }
+  .header-sp-open {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /***** バーガーメニュー内 *****/
+    /***** バーガーメニューの外（左側） *****/
+  }
+  .header-sp-open-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: 100;
+    background-color: #5C4D4D;
+    opacity: 0.95;
+    color: #F9FBFC;
+  }
+  .header-sp-open-right-nav {
+    margin: 80px 35px 70px;
+  }
+  .header-sp-open-right-nav-li-item {
+    margin-top: 20px;
+  }
+  .header-sp-open-right-nav-li-item-en {
+    font-size: 9px;
+    margin-left: 10px;
+  }
+  .header-sp-open-right-nav-li-item-ja {
+    font-size: 15px;
+    margin: 4px 10px;
+  }
+  .header-sp-open-right-nav-li-item-ja .fa-chevron-right {
+    float: right;
+  }
+  .header-sp-open-right-nav-li-item .nav-line {
+    width: 100%;
+  }
+  .header-sp-open-right-link {
+    text-align: center;
+  }
+  .header-sp-open-right-link-web, .header-sp-open-right-link-tel {
+    width: 70%;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 20px;
+    color: #402A23;
+  }
+  .header-sp-open-right-link-web {
+    background-color: rgba(186, 182, 128, 0.5);
+  }
+  .header-sp-open-right-link-web i {
+    margin-right: 6px;
+  }
+  .header-sp-open-right-link-tel {
+    margin-top: 14px;
+    background-color: rgba(212, 93, 121, 0.5);
+  }
+  .header-sp-open-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    z-index: 100;
+  }
+  /***** ABOUT ******/
+  .about {
+    /***** ABOUT01 ******/
+    /***** ABOUT02 ******/
+    /***** ABOUT03 ******/
+  }
+  .about-us-contents {
+    padding: 182px 50px 182px;
+  }
+  .about-concept {
+    margin-top: -70px;
+  }
+  .about-concept-contents {
+    margin-top: -70px;
+    padding: 182px 10px 182px;
+  }
+  .about-concept-contents-group > div {
+    width: 208px;
+  }
+  .about-concept-contents-group > div > svg, .about-concept-contents-group > div > i {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+  }
+  .about-concept-contents-group > div p {
+    margin-top: 14px;
+  }
+  .about-concept-contents-group > div p span {
+    color: #BAB680;
+    font-size: 13px;
+  }
+  .about-staff {
+    margin-top: -70px;
+  }
+  .about-staff-contents {
+    margin-top: -70px;
+    padding: 182px 50px 140px;
+  }
+  /***** STYLE ******/
+  .style-ttl {
+    padding: 15px 15px 110px;
   }
   .style-pc {
     display: none;
@@ -80,6 +270,139 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: -70px;
+  }
+  .style-sp .col-4 {
+    padding: 5px;
+  }
+  .menu {
+    margin-top: 100px;
+  }
+  .menu-ttl {
+    padding: 15px 15px 110px;
+  }
+  .menu-bg {
+    height: 1570px;
+  }
+  .menu-bg .menu-contents {
+    padding: 160px 0px 70px;
+    /***** 各アイテムの横幅＆mTOP調整 ******/
+  }
+  .menu-bg .menu-contents-item {
+    /***** アイコン *****/
+    /***** メニュー内容 *****/
+  }
+  .menu-bg .menu-contents-item-icon {
+    /***** アイコン各写真サイズ調整 *****/
+    /***** アイコンサークル *****/
+  }
+  .menu-bg .menu-contents-item-icon-img {
+    height: 73px;
+    margin-right: 20px;
+  }
+  .menu-bg .menu-contents-item-icon-img .icon-cut {
+    width: 78px;
+    height: 78px;
+  }
+  .menu-bg .menu-contents-item-icon-img .icon-color {
+    width: 35px;
+    height: 75px;
+    margin-right: 5px;
+  }
+  .menu-bg .menu-contents-item-icon-img .icon-perm {
+    width: 82px;
+    height: 72px;
+  }
+  .menu-bg .menu-contents-item-icon-img .icon-straightening {
+    width: 71px;
+    height: 78px;
+  }
+  .menu-bg .menu-contents-item-icon-img .icon-other {
+    width: 91px;
+    height: 75px;
+  }
+  .menu-bg .menu-contents-item-icon-circle {
+    width: 64px;
+    height: 64px;
+  }
+  .menu-bg .menu-contents-item-inner {
+    margin-top: -24px;
+  }
+  .menu-bg .menu-contents-item-inner h2 .line {
+    top: 20px;
+  }
+  .menu-bg .menu-contents-item-inner table {
+    margin-top: 7px;
+    margin-right: 0;
+  }
+  .menu-bg .menu-contents-item-inner table td {
+    font-size: 11px;
+    padding-right: 10px;
+  }
+  .menu-bg .menu-contents-item .straightening {
+    width: 250px;
+  }
+  .menu-bg .menu-contents .item-cut {
+    width: 219px;
+  }
+  .menu-bg .menu-contents .item-color {
+    margin-top: -25px;
+  }
+  .menu-bg .menu-contents .item-perm {
+    margin-top: -25px;
+    width: 312px;
+  }
+  .menu-bg .menu-contents .item-other {
+    width: 276px;
+    margin-top: -40px;
+  }
+  .menu-bg .menu-contentscard i {
+    font-size: 26px;
+  }
+  .menu-fulvic-contents {
+    margin-top: -60px;
+    padding: 85px 50px 170px;
+  }
+  .menu-fulvic-img {
+    margin-top: -70px;
+  }
+  .reserve {
+    margin-top: -70px;
+  }
+  .reserve-contents {
+    background-color: #DBD4CE;
+    padding: 125px 50px 210px;
+    /***** Reserveのボタン・営業時間の位置調整 *****/
+  }
+  .reserve-contents-inner-btn > a {
+    width: 100%;
+  }
+  .reserve-contents-inner-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reserve-contents-inner-time-close {
+    margin-top: 30px;
+  }
+  .access {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 90px 20px;
+  }
+  .access iframe {
+    width: 300px;
+  }
+  .access-address {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-concept-contents-group > div {
+    width: 150px;
+    padding: 0px 5px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

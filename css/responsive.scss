@@ -1,5 +1,6 @@
 @media screen and (max-width: 910px) {
 
+    /***** 左右の写真の隙間０ ******/
     .about-us-img,
     .about-concept-img,
     .about-staff-img,
@@ -9,11 +10,15 @@
     }
 
     .header{
+        
+        /***** TOPのHeader ******/
         &-pc-nav{
             width: 77%;
             margin: auto;
         }
 
+        /***** スクロール後のHeader
+        ロゴとメニューを中央揃え縦並びに ******/
         &-hide .header-scroll {
             flex-direction: column;
         
@@ -24,16 +29,28 @@
         }
     }
 
-    .about-concept-contents-group{
-        flex-wrap: wrap;
-    }
+    /***** ABOUT CONCEPT ******/
+    .about-concept-contents{
+        padding: 182px 20px 220px;
+        
+        &-group{
+            flex-wrap: wrap;
 
+            .concept03, .concept04{
+                margin-top: 30px;
+            }
+        }
+    }
     .menu{
+
+        /***** 背景を高く ******/
         &-bg{
             height: 2380px;
-            background: url(../img/menu-bg-md.jpg) no-repeat bottom center;
+            background: url(../img/menu-bg-md.jpg) no-repeat bottom;
             background-size: cover;
         }
+
+        /***** メニューのアイテムの位置調整 ******/
         &-contents{
             &-row{
                 flex-direction: column;
@@ -50,6 +67,7 @@
             .item-straightening{
                 margin: -85px 0 40px auto;
             }
+
         }
     }
 
@@ -57,8 +75,9 @@
         width: 80%;
     }
 
+    /***** 予約ボタンのサイズ調整 ******/
     .reserve-contents-inner-btn{
-        margin-bottom: 40px;
+        margin-bottom: 50px;
 
         >a {
             display: block;
@@ -71,23 +90,412 @@
 
 }
 @media screen and (max-width: 580px) {
-    .cross{
-        .bar-top{
-        transform: rotate(30deg) translate(0px, 6px);
+   
+    $color-base: #5C4D4D;
+    $color-letter: #402A23;
+    $color-main: #DBD4CE;
+    $color-white: #F9FBFC;
+    $color-matcha: #BAB680;
+    $color-blue:#97A9B5;
+    $color-pink: #B38BBA;
+    $color-red: #BA8080;
+    $color-green: #80BA96;
+    $color-hotpepper: #D45D79;
+
+/***** BASE ******/
+    h1{
+        font-size: 24px;
+    }
+
+    h2, h3{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 11px;
+        line-height: 22px;
+    }
+
+
+    /***** HEADER ******/
+    .header{
+
+        &-pc{
+            display: none;
         }
-        .bar-mid{
-        opacity: 0;
+        
+        &-sp{ 
+            display: block;
+            position: relative;
+
+            /***** バーガーボタン ******/
+            &-burger{
+                z-index: 300;
+                position: fixed; 
+                right: 20px;
+                top: 20px;
+        
+                /***** 開くボタン ******/
+                .bars{
+                    .bar{
+                        display: block;
+                        height: 1px;
+                        width: 30px;
+                        background-color: $color-letter;
+                        margin-right: 0;
+                        margin-left: auto;
+                        transition: 0.5s;
+                        }
+            
+                        .bar-top,
+                        .bar-mid{
+                            margin-bottom: 7px;
+                        }
+
+                        .burger-text{
+                            text-align: center;
+                            line-height: 18px;
+                            font-size: 8px;
+                            padding-top: 7px;
+                            margin: 0;
+
+                        }
+                }
+        
+                /***** 閉じるボタン ******/
+                &.cross{
+                    /***** JSにてtoggleClassされる *****/
+
+                    .bar{
+                        background-color: $color-white;
+                    }
+
+                    .bar-top{
+                        transition: 0.5s;
+                        transform: rotate(40deg) translate(6px, 6px);
+                    }
+                    .bar-mid{
+                        opacity: 0;
+                    }
+                    .bar-bottom{
+                        transition: 0.5s;
+                        transform: rotate(-40deg) translate(6px, -6px);
+                    }
+                    
+                }  
+            }
+
+             /***** バーガーメニュー *****/
+            &-open{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            
+                /***** バーガーメニュー内 *****/
+                &-right{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 70%;
+                    height: 100%;
+                    z-index: 100;
+                    background-color: $color-base;
+                    opacity: 0.95;
+                    color: $color-white;
+
+                    &-nav{
+                        margin: 80px 35px 70px;
+
+                        &-li-item{
+                            margin-top: 20px;
+
+                            &-en{
+                                font-size: 9px;
+                                margin-left: 10px;
+                            }
+
+                            &-ja{
+                                font-size: 15px;
+                                margin: 4px 10px;
+
+                                .fa-chevron-right{
+                                    float: right;
+                                }
+                            }
+
+                            .nav-line{
+                                width: 100%;
+                                
+                            }
+
+                        }
+                    }
+
+                    &-link{
+                        text-align: center;
+
+                        &-web, &-tel{
+                            width: 70%;
+                            margin: 0 auto;
+                            padding: 8px;
+                            border-radius: 20px;
+                            color: $color-letter;
+                        }
+
+                        &-web{
+                            background-color: rgba($color: $color-matcha, $alpha: 0.5);
+
+                            i{
+                                margin-right: 6px;
+                            }
+                        }
+                        &-tel{
+                            margin-top: 14px;
+                            background-color: rgba($color: $color-hotpepper, $alpha: 0.5);
+                        }
+                    }
+                }
+
+                /***** バーガーメニューの外（左側） *****/
+                &-left{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30%;
+                    height: 100%;
+                    z-index: 100;
+                }
+            }
+
         }
-        .bar-bottom{
-        transform: rotate(-30deg) translate(0px, -6px);
+    }
+
+    /***** ABOUT ******/
+    .about{
+
+        /***** ABOUT01 ******/
+        &-us-contents {
+            padding: 182px 50px 182px;
         }
-    }  
+
+        /***** ABOUT02 ******/
+        &-concept {
+            margin-top: -70px;
+            
+            &-contents {
+                margin-top: -70px;
+                padding: 182px 10px 182px;
+                
+                &-group > div{
+                    width: 208px;
+
+                    >svg, > i {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 50px;
+                    }
+
+                    p{
+                        margin-top: 14px;
+
+                        span{
+                            color: $color-matcha;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /***** ABOUT03 ******/
+        &-staff {
+            margin-top: -70px;
+
+            &-contents{
+                margin-top: -70px;
+                padding: 182px 50px 140px;
+            }
+        }
+
+    }
+
+    /***** STYLE ******/
     .style{
+        &-ttl {
+            padding: 15px 15px 110px;
+        }
         &-pc{
             display: none;
         }
         &-sp{
             display: flex;
+            margin-top: -70px;
+
+            .col-4{
+                padding: 5px;
+            }
         }
+    }
+
+    .menu{
+        margin-top: 100px;
+
+        &-ttl {
+            padding: 15px 15px 110px;
+        }
+
+        &-bg{
+            height: 1570px; 
+            
+            .menu-contents{
+                padding: 160px 0px 70px;
+                
+                &-item{
+                    
+                    /***** アイコン *****/
+                    &-icon{
+                        /***** アイコン各写真サイズ調整 *****/
+                        &-img{
+                            height: 73px;
+                            margin-right: 20px;
+                        
+                            .icon-cut{
+                                width: 78px;
+                                height: 78px;
+                            }
+                            .icon-color{
+                                width: 35px;
+                                height: 75px;
+                                margin-right: 5px;
+                            }
+                            .icon-perm{
+                                width: 82px;
+                                height: 72px;
+                            }
+                            .icon-straightening{
+                                width: 71px;
+                                height: 78px;
+                            }
+                            .icon-other{
+                                width: 91px;
+                                height: 75px;
+                            }
+                        }
+
+                        /***** アイコンサークル *****/
+                        &-circle{
+                            width: 64px;
+                            height: 64px;
+                        }
+
+                    }
+
+                    /***** メニュー内容 *****/
+                    &-inner{
+                        margin-top: -24px;
+
+                        h2{
+                            .line{
+                                top: 20px;
+                            }
+                        }
+
+                        table{
+                            margin-top: 7px;
+                            margin-right: 0;
+
+                            td{
+                                font-size: 11px;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                    .straightening {
+                        width: 250px;
+                    }
+                }
+
+                /***** 各アイテムの横幅＆mTOP調整 ******/
+                .item-cut{
+                    width: 219px;
+                }
+                .item-color{
+                    margin-top: -25px;
+                }
+                .item-perm{
+                    margin-top: -25px;
+                    width: 312px;
+                }
+                .item-other{
+                    width: 276px;
+                    margin-top: -40px;
+                }
+
+                &card i {
+                    font-size: 26px;
+                }
+             }
+             
+        }
+
+        &-fulvic{
+            &-contents {
+                margin-top: -60px;
+                padding: 85px 50px 170px;
+            }
+        
+            &-img {
+            margin-top: -70px;
+            }
+        }
+    }
+
+    .reserve {
+        margin-top: -70px;
+
+        &-contents {
+            background-color: #DBD4CE;
+            padding: 125px 50px 210px;
+            
+
+            /***** Reserveのボタン・営業時間の位置調整 *****/
+            &-inner{
+                
+                &-btn > a {
+                    width: 100%;
+                }
+
+                &-time {
+                flex-direction: column;
+
+                &-close{
+                    margin-top: 30px;
+                }
+                }
+            }
+        }
+    }
+    
+    .access {
+        flex-wrap: wrap;
+        padding: 90px 20px;
+
+        iframe{
+            width: 300px;
+        }
+
+        &-address{
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-concept-contents-group > div {
+        width: 150px;
+        padding: 0px 5px;
     }
 }

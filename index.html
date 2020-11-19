@@ -77,7 +77,7 @@
                             <div class="header-scroll-nav-li-item-en">style</div>
                             <div class="header-scroll-nav-li-item-ja">スタイル</div>
                         </a></li>
-                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#nsvMenu">
+                        <li class="header-scroll-nav-li-item"><a class="scroll-btn" href="#navMenu">
                             <div class="header-scroll-nav-li-item-en">menu</div>
                             <div class="header-scroll-nav-li-item-ja">メニュー</div>
                         </a></li>
@@ -97,32 +97,66 @@
         <div class="header-sp">
     <!------------------------SPバーガー------------------------------->
             <div class="header-sp-burger">
-                <a href="#">
+                <a href="#" class="bars">
                     <span class="bar bar-top"></span>
                     <span class="bar bar-mid"></span>
                     <span class="bar bar-bottom"></span>
-                    <p>MENU</p> 
+                    <p class="burger-text">MENU</p> 
                 </a>
             </div>
               <!--------------------バーガーメニュー---------------------------->
             <div class="header-sp-open" id="nav-open">
-                   <nav class="header-sp-open-nav">
-                       <ul class="header-sp-open-nav-li">
-                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navAbout">about</a></li>
-                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#nsvMenu">menu</a></li>
-                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navStyle">style</a></li>
-                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navReserve">reserve</a></li>
-                            <li class="header-sp-open-nav-li-item"><a class="scroll-btn" href="#navAccess">access</a></li>
-                       </ul>
-                   </nav>
-                  <div class="header-sp-open-link">
-                           <div class="header-sp-open-link-web">
-                                    <a href="#"><i class="fas fa-desktop"></i>WEB予約 </a>
-                         </div>
-                         <div class="header-sp-open-link-tel">
-                                    <a href="tel:03-1234-5678"><i class="fas fa-phone"></i>TEL予約</a>
-                           </div>
-                  </div>
+                <div class="header-sp-open-right">
+                    <nav class="header-sp-open-right-nav">
+                        <ul class="header-sp-open-right-nav-li">
+                                <li class="header-sp-open-right-nav-li-item">
+                                    <a class="scroll-btn" href="#navAbout">
+                                        <div class="header-sp-open-right-nav-li-item-en">about</div>
+                                        <div class="header-sp-open-right-nav-li-item-ja">サロンについて<i class="fas fa-chevron-right"></i></div>
+                                        <hr class="nav-line">
+                                    </a>
+                                </li>
+                                <li class="header-sp-open-right-nav-li-item">
+                                    <a class="scroll-btn" href="#navStyle">
+                                        <div class="header-sp-open-right-nav-li-item-en">style</div>
+                                        <div class="header-sp-open-right-nav-li-item-ja">スタイル<i class="fas fa-chevron-right"></i></div>
+                                        <hr class="nav-line">
+                                    </a>
+                                </li>
+                                <li class="header-sp-open-right-nav-li-item">
+                                    <a class="scroll-btn" href="#navMenu">
+                                        <div class="header-sp-open-right-nav-li-item-en">menu</div>
+                                        <div class="header-sp-open-right-nav-li-item-ja">メニュー<i class="fas fa-chevron-right"></i></div>
+                                        <hr class="nav-line">
+                                    </a>
+                                </li>
+                                <li class="header-sp-open-right-nav-li-item">
+                                    <a class="scroll-btn" href="#navReserve">
+                                        <div class="header-sp-open-right-nav-li-item-en">reserve</div>
+                                        <div class="header-sp-open-right-nav-li-item-ja">ご予約<i class="fas fa-chevron-right"></i></div>
+                                        <hr class="nav-line">
+                                    </a>
+                                </li>
+                                <li class="header-sp-open-right-nav-li-item">
+                                    <a class="scroll-btn" href="#navAccess">
+                                        <div class="header-sp-open-right-nav-li-item-en">access</div>
+                                        <div class="header-sp-open-right-nav-li-item-ja">アクセス<i class="fas fa-chevron-right"></i></div>
+                                        <hr class="nav-line">
+                                    </a>
+                                </li>
+                        </ul>
+                    </nav>
+                    <div class="header-sp-open-right-link">
+                            <div class="header-sp-open-right-link-web">
+                                        <a href="#"><i class="fas fa-desktop"></i>WEB予約 </a>
+                            </div>
+                            <div class="header-sp-open-right-link-tel">
+                                        <a href="tel:03-1234-5678"><i class="fas fa-phone"></i>TEL予約</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="header-sp-open-left">
+                </div>
             </div>
         </div><!-- //.header-sp-->
     </div><!-- //.header-->      
@@ -139,9 +173,9 @@
 <!---------------------- BG PAPER -------------------------->
         <div class="bg-paper">
 <!---------------------- ABOUT -------------------------->
-<section class="about" id="navAbout">
+<section class="about">
 <!---------------------- ABOUT 1 -------------------------->
-<div class="about-us row">
+<div class="about-us row" id="navAbout">
     <div class="about-us-img offset-md-1 col-md-7 col-10"><img src="./img/about01.jpg" alt="" class="img-fluid"></div>
     <div class="about-us-contents offset-sm-3 col-sm-9">
         <h3>What's Salon de beaute</h3>
@@ -166,8 +200,8 @@
             <div class="concept02">
                 <svg id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464.39 939"><title>icon_color</title><rect x="103" y="828.43" width="257.22" height="110.57" rx="14.63" ry="14.63"/><polygon points="114.06 806.79 350.33 806.79 450.43 607.77 12.8 607.77 114.06 806.79"/><polygon points="12.8 586.13 450.43 586.13 464.39 87.98 0 87.98 12.8 586.13"/><rect width="464.39" height="66.34"/></svg>
                 <p><span>お一人お一人の髪質や頭皮の
-                    状態にあったトリートメント・
-                    薬剤</span>を処方いたします。</p>
+                    状態にあった</span>トリートメント・
+                    薬剤を処方いたします。</p>
             </div>
             <div class="concept03">
                 <i class="fas fa-child"></i>
@@ -175,7 +209,7 @@
             </div>
             <div class="concept04">
                 <i class="far fa-calendar-alt"></i>
-                <p>お時間やお日にちの都合が合わない場合、できる限り<span>個別に対応させていただきます</span>。</p>
+                <p>お時間やお日にちの都合が合わない場合、できる限り<span>個別に対応</span>させていただきます。</p>
             </div>
         </div>
     </div>
@@ -437,37 +471,39 @@
     </div>
 </section>
 <!---------------------- RESERVE -------------------------->
-<section class="reserve row" id="navReserve">
-    <div class="reserve-contents col-sm-9">
-        <div class="reserve-contents-ttl">
-            <h1>reserve</h1>
-            <hr>
-        </div>
-        <div class="reserve-contents-inner">
-            <p>ご予約はお電話、または、Hotpepper beautyで承っております。</p>
-            <div class="reserve-contents-inner-btn">    
-                <a href="tel:03-1234-5678" class="link-tel">
-                            <i class="fas fa-phone"></i>03-1234-5678</a>
-                <a href="#" class="link-hotpepper">Hotpepper Beautyはこちら</a>
+<section class="reserve" id="navReserve">
+    <div class="row">
+        <div class="reserve-contents col-sm-8">
+            <div class="reserve-contents-ttl">
+                <h1>reserve</h1>
+                <hr>
             </div>
-            <div class="reserve-contents-inner-time">
-                <div class="reserve-contents-inner-time-open">
-                        <h4>OPEN </h4>
-                        <p>水木金 10:00〜22:00 <br>
-                        <span> （最終受付：パーマ・カラー18:00/カット19:00）</span></p>
-                        <p>土日月 10:00〜20:00 <br>
-                        <span>（最終受付：パーマ・カラー18:00/カット19:00）</span></p>
+            <div class="reserve-contents-inner">
+                <p>ご予約はお電話、または、Hotpepper beautyで承っております。</p>
+                <div class="reserve-contents-inner-btn">    
+                    <a href="tel:03-1234-5678" class="link-tel">
+                                <i class="fas fa-phone"></i>03-1234-5678</a>
+                    <a href="#" class="link-hotpepper">Hotpepper Beautyはこちら</a>
                 </div>
-                <div class="reserve-contents-inner-time-close">
-                        <h4>CLOSE </h4>
-                        <p>月曜日・不定休 <br>
-                        <span>（不定休についてはBlogでお知らせします）</span></p> 
-                        <a href="" class="link-blog">Blogへ</a>
+                <div class="reserve-contents-inner-time">
+                    <div class="reserve-contents-inner-time-open">
+                            <h4>OPEN </h4>
+                            <p>水木金 10:00〜22:00 <br>
+                            <span> （最終受付：パーマ・カラー18:00/カット19:00）</span></p>
+                            <p>土日月 10:00〜20:00 <br>
+                            <span>（最終受付：パーマ・カラー18:00/カット19:00）</span></p>
+                    </div>
+                    <div class="reserve-contents-inner-time-close">
+                            <h4>CLOSE </h4>
+                            <p>月曜日・不定休 <br>
+                            <span>（不定休についてはBlogでお知らせします）</span></p> 
+                            <a href="" class="link-blog">Blogへ</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="reserve-img offset-md-4 offset-2 col-md-7 col-10"><img src="./img/reserve.jpg" alt="" class="img-fluid"></div>
     </div>
-    <div class="reserve-img offset-md-4 offset-2 col-md-7 col-10"><img src="./img/reserve.jpg" alt="" class="img-fluid"></div>
 </section>
         </div><!--//.bg-paper-->
     </main>
