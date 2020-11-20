@@ -171,6 +171,10 @@ hr {
   border: none;
 }
 
+.header-pc-nav-li-item:hover {
+  background-color: #DBD4CE;
+}
+
 .header-pc-nav-li-item-en {
   font-size: 12px;
 }
@@ -225,6 +229,10 @@ hr {
 
 .header-hide .header-scroll-nav-li-item:last-of-type {
   border: none;
+}
+
+.header-hide .header-scroll-nav-li-item:hover {
+  background-color: #402A23;
 }
 
 .header-hide .header-scroll-nav-li-item-en {
@@ -658,6 +666,10 @@ hr {
   border-radius: 20px;
 }
 
+.menu-fulvic-contents-link:hover {
+  background-color: rgba(249, 251, 252, 0.3);
+}
+
 .menu-fulvic-img {
   margin-top: -110px;
   z-index: 20;
@@ -696,8 +708,16 @@ hr {
   margin-right: 20px;
 }
 
+.reserve-contents-inner-btn .link-tel:hover {
+  background-color: rgba(64, 42, 35, 0.3);
+}
+
 .reserve-contents-inner-btn .link-hotpepper {
   border: 1px solid #D45D79;
+}
+
+.reserve-contents-inner-btn .link-hotpepper:hover {
+  background-color: rgba(212, 93, 121, 0.3);
 }
 
 .reserve-contents-inner-time {
@@ -715,6 +735,10 @@ hr {
   padding: 6px 18px;
   border: 1px solid #402A23;
   border-radius: 20px;
+}
+
+.reserve-contents-inner-time-close .link-blog:hover {
+  background-color: rgba(64, 42, 35, 0.3);
 }
 
 .reserve-img {

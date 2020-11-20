@@ -161,6 +161,10 @@ hr{
                         border: none;   
                     }
 
+                    &:hover{
+                        background-color: $color-main;
+                    }
+
                      &-en{
                         font-size: 12px;
                     }
@@ -205,6 +209,11 @@ hr{
                         &:last-of-type{
                             border: none;   
                         }
+
+                        &:hover{
+                            background-color: $color-letter;
+                        }
+
                         &-en{
                             font-size: 12px;
                         }
@@ -250,6 +259,7 @@ hr{
 ************************/
 .about{
     padding-top: 100px;
+
 /***** ABOUT 01 *****/
     &-us{
 
@@ -267,6 +277,7 @@ hr{
             }
         }
     }
+
 /***** ABOUT 02 *****/
     &-concept{
         margin-top: -110px;
@@ -310,6 +321,7 @@ hr{
             }
         }
     }
+
 /***** ABOUT 03 *****/
     &-staff{
         margin-top: -110px;
@@ -614,6 +626,10 @@ hr{
                 padding: 8px 24px;
                 border: 1px solid $color-matcha;
                 border-radius: 20px;
+
+                &:hover{
+                    background-color: rgba($color: $color-white, $alpha: 0.3);
+                }
             }
         }
         &-img{
@@ -652,9 +668,17 @@ hr{
                .link-tel{
                     border: 1px solid $color-letter;
                     margin-right: 20px;
+                    
+                    &:hover{
+                        background-color: rgba($color: $color-letter, $alpha: 0.3);
+                    }
                }
                .link-hotpepper{
                     border: 1px solid $color-hotpepper;
+                 
+                    &:hover{
+                        background-color: rgba($color: $color-hotpepper, $alpha: 0.3);
+                    }
                }
            }
 
@@ -670,6 +694,11 @@ hr{
                     padding: 6px 18px;
                     border: 1px solid $color-letter;
                     border-radius: 20px;
+
+                    &:hover{
+                        background-color: rgba($color: $color-letter, $alpha: 0.3);
+                    }
+
                 }
                }
            }
